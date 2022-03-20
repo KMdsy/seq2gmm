@@ -180,7 +180,7 @@ def calculate_score(anomaly, energy, fragments_num):
         recall_list.append(recall)
         f1_list.append(f1)
         
-        print('  precision: ',"%.2f" % precision, '    recall: ',"%.2f" % recall, 'accuracy: ',"%.2f" % accuracy, '    f1_score: ',"%.2f" % f1)
+        # print('  precision: ',"%.2f" % precision, '    recall: ',"%.2f" % recall, 'accuracy: ',"%.2f" % accuracy, '    f1_score: ',"%.2f" % f1)
     return energy, output_length, ground_truth, precision_list, recall_list, f1_list, accuracy_list, prediction_list
 
 def make_batch(inputs, max_sequence_length = None, ifNormalize = False):

@@ -1,9 +1,7 @@
 # main.py
 from config import config_seq2gmm
 from Seq2GMM import Seq2GMM
-from utils import calculate_score
-from utils import read_dataset
-from new_utils import SplitData
+from datahandler import SplitData
 import tensorflow as tf
 import numpy as np
 import copy
@@ -30,7 +28,7 @@ if __name__ == "__main__":
     else:
         split_num = None # learn split_num using greedy algorithm
 
-    data, label, fragments_num, split_num = data_handler.read_data(os.path.join(config_seq2gmm['dataset_dir'], config_seq2gmm['dataset_name']), 'train')
+    data, label, fragments_num, split_num = data_handler.read_data(os.path.join(config_seq2gmm['dataset_dir'], config_seq2gmm['dataset_name']), 'train', split_num)
     t_data, t_label, t_fragments_num, _ = data_handler.read_data(os.path.join(config_seq2gmm['dataset_dir'], config_seq2gmm['dataset_name']), 'test', split_num)
     
     # train

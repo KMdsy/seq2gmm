@@ -21,12 +21,13 @@ Seq2GMM is composed of three blocks, namely the temporal segmentation, the tempo
 ## Requirement
 
 - python>=3.6
-- tensorflow1 >= 1.12
+- tensorflow>=1.12 (The code has not been tested on tensorflow2)
+- pwlf==1.1.0
 
 ## Quick start
 
 ```
-git clone https://github.com/xxx
+git clone [url_of_this_repository]
 cd seq2gmm
 ```
 
@@ -34,10 +35,10 @@ Train & Test Seq2GMM example
 
 ```python
 # Train
-python main.py
+python main.py # train a seq2gmm and test it every 10 epoch
 
-# Test
-python test.py
+# Test 
+python test.py # test using a trained model
 ```
 
 The train logs and trained model will be saved under `log` and  `checkpoint` respectively.

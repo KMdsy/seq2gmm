@@ -5,12 +5,11 @@ from config import config_seq2gmm
 from utils import read_dataset
 from Seq2GMM import Seq2GMM
 from utils import calculate_score
+from datahandler import SplitData
 from utils import ROC_AUC, roc_precision_recall
-import matplotlib.pyplot as plt
 import tensorflow as tf
-import numpy as np
-import visualize as show
 import os
+
 
 dataset_dir = 'UCRArchive_2018'
 dataset_name = 'TwoLeadECG'
@@ -31,8 +30,11 @@ if __name__ == "__main__":
     config_seq2gmm['GMM_input_dim'] = config_seq2gmm['encoder_hidden_units'] + 2
     config_seq2gmm['num_dynamic_dim'] = config_seq2gmm['encoder_hidden_units']
 
-    data, fragments_num, _, normal_cluster = read_dataset(config_seq2gmm, 'train', 'normal', config_seq2gmm['split_frag_num'])
-    t_data, t_fragments_num, t_label, _ = read_dataset(config_seq2gmm, 'test', 'full', config_seq2gmm['split_frag_num'], normal_cluster)
+    # load data
+    data_handler = SplitData()
+    data, label, fragments_num, split_num = data_handler.read_data(os.path.join(config_seq2gmm['dataset_dir'], config_seq2gmm['dataset_name']), 'train', config_seq2gmm['split_frag_num'])
+    t_data, t_label, t_fragments_num, _ = data_handler.read_data(os.path.join(config_seq2gmm['dataset_dir'], config_seq2gmm['dataset_name']), 'test', split_num)
+    
 
     # load model
     seq2gmm = Seq2GMM(config_seq2gmm, log_file)

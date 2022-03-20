@@ -26,7 +26,7 @@ config_seq2gmm['lambda_1'] = 0.0001 #0:0001
 
 # Saver
 config_seq2gmm['max_to_keep'] = None # the maximum number of recent checkpoint files to keep. As new files are created, older files are deleted.
-config_seq2gmm['epoch_num'] = 2501
+config_seq2gmm['epoch_num'] = 501
 config_seq2gmm['save_every_epoch'] = 10
 config_seq2gmm['learning_rate'] = 1e-3
 
