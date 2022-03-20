@@ -43,7 +43,7 @@ python test.py # test using a trained model
 
 The train logs and trained model will be saved under `log` and  `checkpoint` respectively.
 
-We also provide some pre-trained model under `trained_model` .
+We also provide some trained model under `trained_model` .
 
 
 
