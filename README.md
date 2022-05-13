@@ -41,7 +41,7 @@ Seq2GMM is composed of three blocks, namely the temporal segmentation, the tempo
 ## Quick start
 
 ```
-git clone [git_url_of_this_repository]
+git clone https://github.com/KMdsy/seq2gmm.git
 cd seq2gmm
 ```
 
