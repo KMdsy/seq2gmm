@@ -21,15 +21,16 @@ Seq2GMM is composed of three blocks, namely the temporal segmentation, the tempo
 ## Cite This
 
 ```
-@ARTICLE{9765466,
-  author={Yang, Kai and Dou, Shaoyu and Luo, Pan and Wang, Xin and Poor, Vincent},
-  journal={IEEE Transactions on Network Science and Engineering}, 
-  title={Robust Group Anomaly Detection for Quasi-Periodic Network Time Series}, 
+@article{yang2022robust,
+  title={Robust Group Anomaly Detection for Quasi-Periodic Network Time Series},
+  author={Yang, Kai and Dou, Shaoyu and Luo, Pan and Wang, Xin and Poor, H Vincent},
+  journal={IEEE Transactions on Network Science and Engineering},
+  volume={9},
+  number={4},
+  pages={2833--2845},
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/TNSE.2022.3170364}}
+  publisher={IEEE}
+}
 ```
 
 ## Requirement
